@@ -16,7 +16,6 @@ from torch import nn
 import numpy as np
 import pickle
 from torch.cuda.amp import autocast,GradScaler
-import wandb
 from loss import Lt_loss
 
 import random
