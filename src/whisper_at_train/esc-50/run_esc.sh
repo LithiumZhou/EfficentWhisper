@@ -24,7 +24,7 @@ mixup=0.5
 batch_size=48
 
 model=whisper-high-wa_ctr_2_5_10_20 #whisper-high-lw_tr_1_8 (tl-tr, lr=5e-5) whisper-high-lw_down_tr_512_1_8 (tl-tr-512, w/ low-dim proj, lr=1e-4)
-
+cuda=0 #用哪个显卡，0是第一个，1是第二个
 
 model_size=large-v1 #
 tdim=100
@@ -33,8 +33,8 @@ dataset=esc
 bal=bal
 epoch=30
 
-lrscheduler_start=7
-lrscheduler_decay=0.9
+lrscheduler_start=7     # 这三行学习率的超参，很重要，lrscheduler_start是哪个epoch开始衰减
+lrscheduler_decay=0.9   #lrscheduler_decay衰减率，lrscheduler_step 几个epoch衰减一次
 lrscheduler_step=1
 
 wa=False
@@ -87,7 +87,7 @@ do
   train_tar_path=/vasp/exp/whisper/data/whisper_
   eval_tar_path=/vasp/exp/whisper/data/whisper_
 
-  python -W ignore ../runs.py --model ${model} --dataset ${dataset} \
+  CUDA_VISIBLE_DEVICES=${cuda} python -W ignore ../runs.py --model ${model} --dataset ${dataset} \
   --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
   --label-csv /vasp/exp/whisper/data/esc_class_labels_indices.csv --n_class 50 \
   --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model False \
