@@ -16,7 +16,7 @@ pip install -r requirements.txt
 3. Get the pre-trained model,The pre-trained models that can be used in this step are available [here](https://github.com/LithiumZhou/EfficentWhisper/tree/main/pretrained_models)
 
 ```java
-python get model.py
+python get_model.py
 ```
 
 4. start train 
