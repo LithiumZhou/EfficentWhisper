@@ -11,7 +11,7 @@ conda create --name whisper python=3.9
 pip install -r requirements.txt 
 ```
 
-2. Then download the characteristics of esc-50 [here](https://www.dropbox.com/s/hmmdopfjlq3o3vs/esc_feat.zip?dl=1). And you need to replace lines 84-89 in [run_esc.sh ](https://github.com/LithiumZhou/EfficentWhisper/blob/main/src/whisper_at_train/esc-50/run_esc.sh)with your dataset json path,label.csv and feature path. And json and label.csv are ready for you.
+2. Then download the characteristics of esc-50 [here](https://www.dropbox.com/s/hmmdopfjlq3o3vs/esc_feat.zip?dl=1). And you need to replace lines 84-89 in [run_esc.sh ](https://github.com/LithiumZhou/EfficentWhisper/blob/main/src/whisper_at_train/esc-50/run_esc.sh)with your dataset json path,label.csv and feature path. datapath json and label.csv are ready for you.
 
 3. Get the pre-trained model,The pre-trained models that can be used in this step are available [here](https://github.com/LithiumZhou/EfficentWhisper/tree/main/pretrained_models)
 
