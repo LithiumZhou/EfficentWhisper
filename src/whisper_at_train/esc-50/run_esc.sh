@@ -83,13 +83,14 @@ do
 
   tr_data=/vasp/exp/whisper/data/datafiles/esc_train_data_${fold}.json
   te_data=/vasp/exp/whisper/data/datafiles/esc_eval_data_${fold}.json
+  label_csv=/vasp/exp/whisper/data/datafiles/esc_class_labels_indices.csv
 
   train_tar_path=/vasp/exp/whisper/data/yourfeaturepath
   eval_tar_path=/vasp/exp/whisper/data/yourfeaturepath
 
   CUDA_VISIBLE_DEVICES=${cuda} python -W ignore ../runs.py --model ${model} --dataset ${dataset} \
   --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
-  --label-csv /vasp/exp/whisper/data/esc_class_labels_indices.csv --n_class 50 \
+  --label_csv ${label_csv} --n_class 50 \
   --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model False \
   --freqm $freqm --timem $timem --mixup ${mixup} --bal ${bal} \
   --model_size ${model_size} --label_smooth ${label_smooth} \
