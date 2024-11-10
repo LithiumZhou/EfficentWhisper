@@ -1,7 +1,6 @@
 __pycache__/
 .ipynb_checkpoints
 .idea
-data/*
 /src/whisper_at_train/esc-50/exp/
 src/whisper_at_train/esc-50/wandb/
 *.pt
