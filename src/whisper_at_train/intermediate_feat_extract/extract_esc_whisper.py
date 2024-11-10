@@ -40,7 +40,6 @@ mdl_size_list = ['large-v1']
 # mdl_size_list = ['large-v2', 'large-v1', 'medium.en', 'medium', 'small.en', 'small', 'base.en', 'base', 'tiny.en', 'tiny'] 
 for mdl_size in mdl_size_list:
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(device)
     checkpoint_path = '/root/.cache/whisper/{:s}.pt'.format(mdl_size)
     checkpoint = torch.load(checkpoint_path, map_location=device)
     dims = ModelDimensions(**checkpoint["dims"])
