@@ -23,7 +23,7 @@ timem=10
 mixup=0.5
 batch_size=48
 
-model=whisper-high-wa_ctr_2_5_10_20 #whisper-high-lw_tr_1_8 (tl-tr, lr=5e-5) whisper-high-lw_down_tr_512_1_8 (tl-tr-512, w/ low-dim proj, lr=1e-4)
+model=whisper-high-wa_tr_8#whisper-high-lw_tr_1_8 (tl-tr, lr=5e-5) whisper-high-lw_down_tr_512_1_8 (tl-tr-512, w/ low-dim proj, lr=1e-4)
 cuda=0 #用哪个显卡，0是第一个，1是第二个
 
 model_size=large-v1 #
