@@ -81,8 +81,8 @@ if args.dataset == 'esc':
         train_tar_path = '/g813_u1/zhoujia/whisper-at/data/' + args.model_size + 'tdim=' + args.tdim
         eval_tar_path = '/g813_u1/zhoujia/whisper-at/data/' + args.model_size + 'tdim=' + args.tdim
     else:
-        train_tar_path = args.train_tar_path  + args.model_size +'_tdim=' + args.tdim
-        eval_tar_path = args.train_tar_path  + args.model_size +'_tdim=' + args.tdim
+        train_tar_path = args.train_tar_path
+        eval_tar_path = args.train_tar_path
     shuffle = True
 elif args.dataset == 'as-bal' or args.dataset == 'as-full':
     if args.model_size == 'hubert-xlarge-ls960-ft' or args.model_size == 'wav2vec2-large-robust-ft-swbd-300h':

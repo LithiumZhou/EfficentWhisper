@@ -84,8 +84,8 @@ do
   tr_data=/vasp/exp/whisper/data/datafiles/esc_train_data_${fold}.json
   te_data=/vasp/exp/whisper/data/datafiles/esc_eval_data_${fold}.json
 
-  train_tar_path=/vasp/exp/whisper/data/whisper_
-  eval_tar_path=/vasp/exp/whisper/data/whisper_
+  train_tar_path=/vasp/exp/whisper/data/yourfeaturepath
+  eval_tar_path=/vasp/exp/whisper/data/yourfeaturepath
 
   CUDA_VISIBLE_DEVICES=${cuda} python -W ignore ../runs.py --model ${model} --dataset ${dataset} \
   --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
