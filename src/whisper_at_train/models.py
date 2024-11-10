@@ -140,7 +140,7 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     x = torch.randn([2,33,100,1280]).to(device)
     # m = TLTR(mode='mstf_tr_8',rep_dim=1280,n_layer=32)
-    m = TLTR(mode='wa_tr_4')
+    m = TLTR(mode='wa_tr_4_10')
     m.to(device)
     output = m(x)
     print(output.shape)
