@@ -31,3 +31,9 @@ chmod +x run_esc.sh
 
 The feature extraction code can be run directly. You just need to prepare your dataset and modify lines 27, 52-53 [here](https://github.com/LithiumZhou/EfficentWhisper/blob/main/src/whisper_at_train/intermediate_feat_extract/extract_esc_whisper.py).The specific meaning of the code is to prepare a json file with the storage path of all your data sets.
 
+## Result on ESC-50 and AudioSet
+
+| Model          | AudioSet | ESC-50 |
+| ----- | -------- | ------ |
+| Whisper-WA-CTR | 42.2mAp  | 93.1%  |
+
