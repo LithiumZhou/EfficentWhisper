@@ -24,11 +24,8 @@ if __name__ == '__main__':
         cum_result = cum_result + result
     result = cum_result / 5
     np.savetxt(args.exp_path+'/result.csv', result, delimiter=',')
-     #result 是k折的每一轮的平均acc
     best_epoch = np.argmax(result[:, 0])
-    #best_result是平均最大的精准度
     np.savetxt(args.exp_path + '/best_result.csv', result[best_epoch, :], delimiter=',')
-
     acc_fold = []
     print('--------------Result Summary--------------')
     for fold in range(1, 6):
