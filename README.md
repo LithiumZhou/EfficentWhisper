@@ -3,7 +3,7 @@
 This repository provides methods for extracting Whisper features and examples for training the ESC-50 dataset based on Whisper-AT. This means you can use Whisper to extract features from any dataset and train it.
 I give the ESC-50 dataset as an example。
 
-## Qucikstart
+## Qucikstart---ESC-50
 
 1. Prepare your environment
 
